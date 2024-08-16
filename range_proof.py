@@ -5,6 +5,7 @@ def keccak256(data):
 
 # Prover
 def generate_proof_and_encrypted_age(seed, age_actual, age_to_prove):
+
     proof = keccak256(seed)
     encrypted_age = keccak256(seed)
     
