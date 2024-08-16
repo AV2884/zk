@@ -6,7 +6,7 @@ n = 2**255 - 19
 g = 26959946667150639794667015087019630673557916260026308143510066298881
 
 # Alice's secrets
-input_string = "ABHIVEER"
+input_string = "client password"
 x = int("".join(str(ord(char)) for char in input_string)) 
 print(f"Alice's data {x}")
 v = random.randint(1, 2**80)  # Alice's random value
