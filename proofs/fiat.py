@@ -32,7 +32,7 @@ print("")
 
 # ALICE: Computes r and Result
 z = 2347865 #If Alice wants to cheat
-r = v - c * x
+r = v - c * x 
 print("ALICE sends:")
 print(f"r = {r}")
 print("")
