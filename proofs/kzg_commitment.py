@@ -1,5 +1,4 @@
 import random
-import sympy
 import numpy as np
 
 # Polynomial class
@@ -20,6 +19,7 @@ class Prover:
         self.polynomial = polynomial
 
     def commit(self, generator, p):
+        #This is the polynomail commitment:
         return [pow(generator, coeff, p) for coeff in self.polynomial.coefficients]
 
     def evaluate_polynomial(self, x, p):
