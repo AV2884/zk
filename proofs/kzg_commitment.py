@@ -90,6 +90,7 @@ if __name__ == "__main__":
 
     # Verifier checks the validity of the commitment
     verifier = Verifier()
+    # y = 847218
     is_valid = verifier.verify(commitment, x, y, generator, p)
 
     print(f"Polynomial coefficients: {coefficients}")
