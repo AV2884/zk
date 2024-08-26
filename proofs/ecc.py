@@ -1,4 +1,5 @@
 import hashlib
+from random import randint
 
 # Elliptic curve parameters for secp256k1 (used in Bitcoin and Ethereum)
 a = 0
@@ -43,7 +44,6 @@ def point_multiply(k, P, p):
 
 # Generate a key pair
 def gen_key_pair(G, n, p):
-    from random import randint
     d = randint(1, n - 1)
     Q = point_multiply(d, G, p)
     return d, Q
@@ -56,7 +56,6 @@ def keccak256(data):
 def sign(message, private_key, G, n, p):
     z_hex = keccak256(message).hex()
     z = int(z_hex, 16) % n
-    from random import randint
     while True:
         k = randint(1, n - 1)
         R = point_multiply(k, G, p)
